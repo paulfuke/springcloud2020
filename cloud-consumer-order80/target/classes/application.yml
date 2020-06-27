@@ -1,0 +1,19 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: cloud-consumer-order80
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetchRegistry: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
+#  instance:
+    #设置Eureka客户端向服务端发送心跳的时间间隔
+#    lease-renewal-interval-in-seconds: 1
+    #设置Eureka服务端在最后一次心跳的等待时间，超过就剔除
+#    lease-expiration-duration-in-seconds: 2
+

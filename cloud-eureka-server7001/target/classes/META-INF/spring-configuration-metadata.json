@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "",
+      "type": "com.dongpo.cloud.EurekaMain7001",
+      "sourceType": "com.dongpo.cloud.EurekaMain7001"
+    }
+  ],
+  "properties": [
+    {
+      "name": "eureka.client.fetch-registry.service-url.defaultZone",
+      "type": "java.lang.String",
+      "description": "Description for eureka.client.fetch-registry.service-url.defaultZone."
+    }
+  ],
+  "hints": []
+}
