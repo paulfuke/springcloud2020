@@ -22,7 +22,11 @@
             <artifactId>springcloud2020</artifactId>
             <version>${project.version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.dongpo</groupId>
+            <artifactId>cloud-commons-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
         <dependency>

@@ -13,4 +13,6 @@ eureka:
     #关闭eureka的自我保护机制--生产时不能关
 #    enable-self-preservation: false
     #设置Eureka接收心跳的频率
+  server:
+    peer-node-read-timeout-ms: 2000
 #    eviction-interval-timer-in-ms: 2000

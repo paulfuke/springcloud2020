@@ -1,5 +1,6 @@
 package com.dongpo.cloud.controller;
 
+import com.dongpo.cloud.entities.CommonResult;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,7 +22,7 @@ public class PaymentController {
     private String serverPort;
 
     @GetMapping("/payment/consul")
-    public String payment(){
-        return "consul provider and serverPort: " + serverPort + UUID.randomUUID().toString();
+    public CommonResult payment(){
+        return new CommonResult(200, "consul provider and serverPort: " + serverPort + UUID.randomUUID().toString());
     }
 }
