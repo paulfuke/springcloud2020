@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @className PaymentController
@@ -58,7 +59,6 @@ public class PaymentController {
         for (String service : services) {
             log.info("******service: "+service);
         }
-
         //获取某个服务的实例
         List<ServiceInstance> instances = discoveryClient.getInstances("CLOUD-PAYMENT-SERVICE");
         for (ServiceInstance instance : instances) {
@@ -70,6 +70,16 @@ public class PaymentController {
 
     @GetMapping("/payment/lb")
     public String loadBalance(){
+        return serverPort;
+    }
+
+    @GetMapping("/timeout")
+    public String timeOut(){
+        try {
+            TimeUnit.SECONDS.sleep(4);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return serverPort;
     }
 }
